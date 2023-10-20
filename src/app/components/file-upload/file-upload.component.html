@@ -1,0 +1,33 @@
+<ibm-label [helperText]="helperText" [invalid]="invalid" [invalidText]="invalidText">
+    {{label}}
+    <input value={{fileName}} ibmText [size]="size" [invalid]="invalid" [disabled]="disabled" [theme]="theme"
+        [placeholder]="placeholder" [autocomplete]="autocomplete">
+</ibm-label>
+<button style="float: right; margin-bottom: 1em;margin-top: 1em;margin-left: 1em;" (click)="file.click()" ibmButton>
+    UPLOAD
+</button>
+<br>
+
+<input style="display: none;" #file type="file" (change)="onSelectFile($event)">
+
+<br>
+
+<form>
+    <fieldset style="border:1px solid #999; border-radius:8px; box-shadow:0 0 8px #999;padding:6px;">
+
+        <div class="upload-content" *ngIf="model.data.length > 0">
+            <app-spinner *ngIf="loading"></app-spinner>
+            <ng-container *ngIf="!loading">
+                <h1 *ngIf="noData" style="margin-top: 5em; margin-bottom: 5em; margin-left: 7em; margin-right: 7em;">{{previewTitle}}</h1>
+                <ibm-table-container *ngIf="!noData">
+                    <ibm-table [model]="model" [stickyHeader]="stickyHeader" [size]="size" [skeleton]="loading"
+                        [enableSingleSelect]="enableSingleSelect" [showSelectionColumn]="showSelectionColumn"
+                        [striped]="striped" [sortable]="sortable" [isDataGrid]="isDataGrid"
+                        [stickyHeader]="false">
+                    </ibm-table>
+                </ibm-table-container>
+            </ng-container>
+        </div>
+                </fieldset>
+
+</form>

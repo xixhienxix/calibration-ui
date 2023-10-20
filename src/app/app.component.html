@@ -1,4 +1,17 @@
-<app-header></app-header>
 <main class="bx--content">
-	<router-outlet></router-outlet>
+	<div class="main-container">
+		<ibm-header class="header-styles" name="Filename">Filename</ibm-header>
+		<br>
+		<ibm-tabs aria-label="List of tabs">
+			<ibm-tab heading="Dashboard">
+				<app-file-upload></app-file-upload>
+			</ibm-tab>
+			<ibm-tab heading="Customize">Customize</ibm-tab>
+			<ibm-tab heading="Summary">Summary</ibm-tab>
+		</ibm-tabs>
+		<br>
+		<div class="next-button">
+			<button style="float: right; margin-right: 1em;" ibmButton>Next</button>
+		</div>
+	</div>
 </main>
