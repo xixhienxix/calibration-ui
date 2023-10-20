@@ -1,6 +1,6 @@
-# CARBON ANGULAR STARTER
+# CALIBRATION-UI
 
-Kick start your application development with Carbon Angular.
+Run Calibration UI.
 
 ## Prerequisites
 
@@ -12,11 +12,8 @@ Kick start your application development with Carbon Angular.
 Run the following in the terminal:
 
 ```bash
-# to download
-git clone https://github.com/carbon-design-system/carbon-angular-starter.git
-
 # to install
-cd carbon-angular-starter
+cd calibration-ui
 npm i
 ```
 
